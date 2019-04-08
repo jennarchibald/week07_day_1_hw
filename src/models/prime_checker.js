@@ -17,7 +17,6 @@ PrimeChecker.prototype.checkPrime = function (number) {
 
   if (number <= 1){return false};
 
-  let factorials = 0;
   let largestPossibleFactor;
 
   if (number % 2 === 0){
@@ -26,15 +25,11 @@ PrimeChecker.prototype.checkPrime = function (number) {
     largestPossibleFactor = (number - 1) / 2;
   };
 
-  for (let i = 1; i <= largestPossibleFactor; i++){
+  for (let i = 2; i <= largestPossibleFactor; i++){
     if (number % i === 0){
-      factorials++;
+      return false
     };
-    if (factorials > 2){ break;}
   };
-
-  if (factorials > 2){return false};
-
   return true;
 };
 
