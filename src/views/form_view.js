@@ -10,7 +10,12 @@ FormView.prototype.bindEvents = function () {
     event.preventDefault()
     const number = event.target.number.value;
     PubSub.publish('FormView: number-submitted', number);
+    this.clearForm(form);
   });
+};
+
+FormView.prototype.clearForm = function (form) {
+  form.reset();
 };
 
 module.exports = FormView;

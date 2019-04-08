@@ -15,7 +15,6 @@ ResultView.prototype.bindEvents = function () {
   });
 };
 
-
 ResultView.prototype.displayNumber = function (number) {
   const numberChecked = document.querySelector('#number-checked');
   numberChecked.textContent = number + `...?`;
