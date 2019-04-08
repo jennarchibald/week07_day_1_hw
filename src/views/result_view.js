@@ -17,7 +17,7 @@ ResultView.prototype.displayResult = function (answer) {
   if (answer) {
     result.textContent = `Yes! It's Prime!`;
   } else {
-    result.textContent = `No.. It's not prime...`;
+    result.textContent = `No... It's not prime...`;
   }
 };
 
