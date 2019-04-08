@@ -29,7 +29,3 @@ PrimeChecker.prototype.checkPrime = function (number) {
 };
 
 module.exports = PrimeChecker;
-
-const b = new PrimeChecker();
-
-console.log(b.checkPrime(19));
