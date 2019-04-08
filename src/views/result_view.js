@@ -24,7 +24,6 @@ ResultView.prototype.displayResult = function (answer) {
   const result = document.querySelector('#result');
   if (answer) {
     result.textContent = `Yes! It's Prime!`;
-    console.log(result.textContent);
   } else {
     result.textContent = `No... It's not prime...`;
   }
