@@ -15,15 +15,9 @@ PrimeChecker.prototype.bindEvents = function(){
 
 PrimeChecker.prototype.checkPrime = function (number) {
 
-  if (number <= 1){return false};
+  if (number <= 1 || number % 2 === 0 ){return false};
 
-  let largestPossibleFactor;
-
-  if (number % 2 === 0){
-    return false;
-  } else {
-    largestPossibleFactor = (number - 1) / 2;
-  };
+  let largestPossibleFactor = (number - 1) / 2;
 
   for (let i = 2; i <= largestPossibleFactor; i++){
     if (number % i === 0){
