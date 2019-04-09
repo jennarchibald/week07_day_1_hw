@@ -18,9 +18,9 @@ PrimeChecker.prototype.checkPrime = function (number) {
 
   if (number <= 1 || number % 2 === 0 ){return false};
 
-  let largestPossibleFactor = Math.floor(Math.sqrt(number));
+  const unpairedFactor = Math.floor(Math.sqrt(number));
 
-  for (let i = 2; i <= largestPossibleFactor; i++){
+  for (let i = 2; i <= unpairedFactor; i++){
     if (number % i === 0){
       return false;
     };
